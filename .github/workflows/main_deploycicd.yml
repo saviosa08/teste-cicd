@@ -7,7 +7,7 @@ on:
 
 jobs:
   build-and-deploy:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps:
       - name: Checkout do código
         uses: actions/checkout@v3
@@ -15,9 +15,8 @@ jobs:
       - name: Deploy para Azure
         uses: azure/webapps-deploy@v2
         with:
-          app-name: 'nome-do-seu-app'
-          publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
-
+          app-name: 'teste-cicd'
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_F021CC2484AF4296BE8BBF08C6AA1B96 }}
 # # Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # # More GitHub Actions for Azure: https://github.com/Azure/actions
 
